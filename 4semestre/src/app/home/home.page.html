@@ -6,7 +6,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Encabezado
+      TeLlevoApp
     </ion-title>
 
     <ion-buttons slot="start" >
@@ -14,14 +14,11 @@
     </ion-buttons>
     
   </ion-toolbar>
-
- 
 </ion-header>
 
 
-
 <ion-content [fullscreen]="true">
-
+  <h1>WELCOME</h1>
   
   <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
     <ion-header>
@@ -32,11 +29,22 @@
     <ion-content>
       <ion-list>
         <!--CUENTA, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
-        <ion-item>Registro</ion-item>
-        <ion-item>Login</ion-item>
-        <ion-item>Autos Disponibles</ion-item>
-        <ion-item>Contactos</ion-item>
-        <ion-item>Ayuda</ion-item>
+        <ion-item [routerLink] = "['/']">
+          <ion-icon name="person-add-outline"></ion-icon>
+          Registro
+        </ion-item>
+        <ion-item [routerLink] = "['/login']">
+          <ion-icon name="log-in-outline"></ion-icon>
+          Login
+        </ion-item>
+        <ion-item [routerLink] = "['/']">
+          <ion-icon name="call-outline"></ion-icon>
+          Contactos
+        </ion-item>
+        <ion-item [routerLink] = "['/']">
+          <ion-icon name="information-outline"></ion-icon>
+          Ayuda
+        </ion-item>
         <!--LOGOUT, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
 
       </ion-list>
@@ -45,7 +53,6 @@
   
   <ion-router-outlet id="main"></ion-router-outlet>
 
-    <ion-button color="primary" [routerLink] = "['/login']">LOGIN</ion-button>
 
 
 </ion-content>
@@ -54,7 +61,7 @@
 
 <ion-footer class="ion-no-border">
   <ion-toolbar>
-    <ion-title>Pie de aplicacion</ion-title>
+    <ion-title>¿What are you looking for her?</ion-title>
   </ion-toolbar>
 </ion-footer>
 
