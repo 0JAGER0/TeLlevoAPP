@@ -1,9 +1,63 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>registro</ion-title>
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Custom Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!--CUENTA, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
+        <ion-item [routerLink] = "['/registro']">
+          <ion-icon name="person-add-outline"></ion-icon>
+          Registro
+        </ion-item>
+        <ion-item [routerLink] ="['/inicio']">
+          <ion-icon name="log-in-outline"></ion-icon>
+          Login
+        </ion-item>
+        <ion-item [routerLink] = "['/contactos']">
+          <ion-icon name="call-outline"></ion-icon>
+          Contactos
+        </ion-item>
+        <ion-item [routerLink] = "['/ayuda']">
+          <ion-icon name="information-outline"></ion-icon>
+          Ayuda
+        </ion-item>
+        <!--LOGOUT, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-router-outlet id="main"></ion-router-outlet>
+  <ion-icon name="arrow-back"></ion-icon> 
+  
+  <ion-item>
+    <ion-label position="floating">Nombre Completo</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Número de teléfono</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Correo Electrónico</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-button expand="block">Registrar</ion-button>
 
 </ion-content>
