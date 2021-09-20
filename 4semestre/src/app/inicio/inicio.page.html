@@ -1,9 +1,78 @@
-<ion-header>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>inicio</ion-title>
+    <ion-title>
+      TeLlevoApp
+    </ion-title>
+
+    <ion-buttons slot="start" >
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+
+<ion-content> 
+  
+  <h1>Iniciar sesion</h1>
+
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!--CUENTA, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
+        <ion-item [routerLink] = "['/registro']">
+          <ion-icon name="person-add-outline"></ion-icon>
+          Registro
+        </ion-item>
+        <ion-item [routerLink] ="['/inicio']">
+          <ion-icon name="log-in-outline"></ion-icon>
+          Login
+        </ion-item>
+        <ion-item [routerLink] = "['/contactos']">
+          <ion-icon name="call-outline"></ion-icon>
+          Contactos
+        </ion-item>
+        <ion-item [routerLink] = "['/ayuda']">
+          <ion-icon name="information-outline"></ion-icon>
+          Ayuda
+        </ion-item>
+        <!--LOGOUT, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+ 
+  <ion-list lines="full" class="ion-no-margin">
+
+    <ion-item>
+      <ion-label>Nombre de usuario: </ion-label>
+      <ion-input placeholder="Usuario" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Contraseña: </ion-label>
+      <ion-input placeholder="Contraseña" type="password"></ion-input>
+    </ion-item>
+
+    <ion-button color="success" class="Ingresar-boton">Success</ion-button>
+
+</ion-list>
+
 
 </ion-content>
+
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>¿What are you looking for her?</ion-title>
+  </ion-toolbar>
+</ion-footer>
