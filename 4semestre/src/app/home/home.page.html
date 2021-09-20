@@ -1,28 +1,60 @@
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Ola
+      Encabezado
     </ion-title>
+
+    <ion-buttons slot="start" >
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    
   </ion-toolbar>
+
+ 
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
 
-    <ion-card>
-      <img src="./madison.jpg" />
-      <ion-card-header>
-        <ion-card-subtitle>Destination</ion-card-subtitle>
-        <ion-card-title>Madison, WI</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
-      </ion-card-content>
-    </ion-card>
+
+<ion-content [fullscreen]="true">
+
+  
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Custom Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!--CUENTA, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
+        <ion-item>Registro</ion-item>
+        <ion-item>Login</ion-item>
+        <ion-item>Autos Disponibles</ion-item>
+        <ion-item>Contactos</ion-item>
+        <ion-item>Ayuda</ion-item>
+        <!--LOGOUT, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-router-outlet id="main"></ion-router-outlet>
 
     <ion-button color="primary" [routerLink] = "['/login']">LOGIN</ion-button>
 
-  </ion-header>
 
 </ion-content>
+
+
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Pie de aplicacion</ion-title>
+  </ion-toolbar>
+</ion-footer>
 
