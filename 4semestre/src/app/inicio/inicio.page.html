@@ -18,11 +18,9 @@
 
 <ion-content> 
   
-  <h1>Iniciar sesion</h1>
-
   <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
     <ion-header>
-      <ion-toolbar color="tertiary">
+      <ion-toolbar color="dark">
         <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -50,26 +48,25 @@
     </ion-content>
   </ion-menu>
   <ion-router-outlet id="main"></ion-router-outlet>
- 
-  <ion-list lines="full" class="ion-no-margin">
 
-    <ion-item>
-      <ion-label>Nombre de usuario: </ion-label>
-      <ion-input placeholder="Usuario" type="text"></ion-input>
-    </ion-item>
+  <ion-content>
+    <div id="header">
+      <h1>Iniciar sesion</h1>
+    </div>
+  
+    <form id="form">
+      <app-input placeholder="Email"></app-input>
+      <app-input type="password" placeholder="Password"></app-input>
+      <ion-button expand="block" shape="round">Ingresar</ion-button>
+    </form>
 
-    <ion-item>
-      <ion-label>Contraseña: </ion-label>
-      <ion-input placeholder="Contraseña" type="password"></ion-input>
-    </ion-item>
+  </ion-content>
+  
 
-    <ion-button color="success" class="Ingresar-boton">Success</ion-button>
 
-</ion-list>
 
 
 </ion-content>
-
 
 <ion-footer class="ion-no-border">
   <ion-toolbar>
