@@ -13,60 +13,90 @@
 </ion-header>
 
 <ion-content>
-    <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
-      <ion-header>
-        <ion-toolbar color="dark">
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="dark">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-      <ion-content>
-        <ion-list>
-          <!--CUENTA, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
-          <ion-item [routerLink] = "['/home']">
-            <ion-icon name="home"></ion-icon>
-            Home
-          </ion-item>
-          <ion-item [routerLink] ="['/inicio']">
-            <ion-icon name="log-in-outline"></ion-icon>
-            Login
-          </ion-item>
-          <ion-item [routerLink] = "['/contactos']">
-            <ion-icon name="call-outline"></ion-icon>
-            Contactos
-          </ion-item>
-          <ion-item [routerLink] = "['/ayuda']">
-            <ion-icon name="information-outline"></ion-icon>
-            Ayuda
-          </ion-item>
-          <!--LOGOUT, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
+    <ion-content>
+      <ion-list>
+        <!--CUENTA, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
+        <ion-item [routerLink] = "['/home']">
+          <ion-icon name="home-sharp"></ion-icon>
+          Home
+        </ion-item>
+        <ion-item [routerLink] ="['/inicio']">
+          <ion-icon name="enter-sharp"></ion-icon>
+          Login
+        </ion-item>
+        <ion-item [routerLink] = "['/contactos']">
+          <ion-icon name="call-sharp"></ion-icon>   
+          Contactos
+        </ion-item>
+        <ion-item [routerLink] = "['/contactos']">
+          <ion-icon name="build-sharp"></ion-icon>
+          Configuraciones 
+        </ion-item>
+        <ion-item [routerLink] = "['/ayuda']">
+          <ion-icon name="information-circle-sharp"></ion-icon>  
+          Ayuda
+        </ion-item>
+        <!--LOGOUT, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
 
-        </ion-list>
-      </ion-content>
+      </ion-list>
+    </ion-content>
   </ion-menu>
   
   <ion-router-outlet id="main"></ion-router-outlet>
   
+  <h3  align="center">TeLlevoApp    <ion-icon name="car-sport-sharp"></ion-icon></h3>
+
+  <ion-item>
+    <ion-label position="floating"> 
+      <ion-icon name="person-sharp"></ion-icon>    Nombre Completo</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">
+      <ion-icon name="call-sharp"></ion-icon>    Número de teléfono</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">
+      <ion-icon name="mail-sharp"></ion-icon>    Correo Electrónico</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">
+      <ion-icon name="eye-off-sharp"></ion-icon>    Contraseña</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">
+      <ion-icon name="eye-off-sharp"></ion-icon>    Confirmar Contraseña</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
   
   <ion-item>
-    <ion-label position="floating">Nombre Completo</ion-label>
-    <ion-input></ion-input>
+    <ion-label>Soy conductor</ion-label>
+    <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
   </ion-item>
 
   <ion-item>
-    <ion-label position="floating">Número de teléfono</ion-label>
-    <ion-input></ion-input>
+    <ion-checkbox color="primary" slot="start"></ion-checkbox>
+    <ion-label>Necesito un auto</ion-label>
   </ion-item>
+  
 
-  <ion-item>
-    <ion-label position="floating">Correo Electrónico</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating">Contraseña</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+  <ion-button color="danger">  Cancelar  </ion-button>
+  <ion-button type="clear">  Registrar  </ion-button>
   <ion-button expand="block">Registrar</ion-button>
+  <ion-button expand="block" color="danger">Cancelar</ion-button>
 
 </ion-content>

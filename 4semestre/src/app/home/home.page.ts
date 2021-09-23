@@ -9,6 +9,10 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage {
 
+  imagenes=[
+    'assets/fotos_app/auto_negro.png'
+  ]
+
   constructor(private menu: MenuController) { }
 
   openFirst() {

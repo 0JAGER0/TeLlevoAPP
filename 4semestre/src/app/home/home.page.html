@@ -18,7 +18,8 @@
 
 
 <ion-content>
-  <h1> <ion-icon name="home"></ion-icon> WELCOME</h1>
+  <h3 align="center"> WELCOME     <ion-icon name="accessibility-sharp"></ion-icon></h3>
+  <h1 align="center">¿A dónde te llevo?</h1>
   
   <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
     <ion-header>
@@ -31,19 +32,23 @@
       <ion-list>
         <!--CUENTA, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
         <ion-item [routerLink] = "['/registro']">
-          <ion-icon name="person-add-outline"></ion-icon>
+          <ion-icon name="person-add-sharp"></ion-icon>
           Registro
         </ion-item>
         <ion-item [routerLink] ="['/inicio']">
-          <ion-icon name="log-in-outline"></ion-icon>
+          <ion-icon name="enter-sharp"></ion-icon>
           Login
         </ion-item>
         <ion-item [routerLink] = "['/contactos']">
-          <ion-icon name="call-outline"></ion-icon>
+          <ion-icon name="call-sharp"></ion-icon>   
           Contactos
         </ion-item>
+        <ion-item [routerLink] = "['/contactos']">
+          <ion-icon name="build-sharp"></ion-icon>
+          Configuraciones 
+        </ion-item>
         <ion-item [routerLink] = "['/ayuda']">
-          <ion-icon name="information-outline"></ion-icon>
+          <ion-icon name="information-circle-sharp"></ion-icon>  
           Ayuda
         </ion-item>
         <!--LOGOUT, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
@@ -55,7 +60,7 @@
   <ion-router-outlet id="main"></ion-router-outlet>
 
   <ion-card>
-    <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_956,h_637/v1597151185/assets/e0/815670-02de-44f4-83fa-02fdab69d751/original/Pool.jpg" />
+    <img src="assets/fotos_app/auto_negro.png" alt="Imagen">
     <ion-card-header>
       <ion-card-subtitle>Rapido, eficiente y seguro :')</ion-card-subtitle>
     </ion-card-header>
