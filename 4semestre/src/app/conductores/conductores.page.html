@@ -1,9 +1,82 @@
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+
 <ion-header>
-  <ion-toolbar>
-    <ion-title>conductores</ion-title>
+  <ion-toolbar color="warning">
+    <ion-title>
+ <h3  align="center">TeLlevoApp    <ion-icon name="car-sport-sharp"></ion-icon></h3>
+    </ion-title>
+
+    <ion-buttons slot="start" >
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+
+
+  
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="black">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!--CUENTA, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
+        <ion-item [routerLink] = "['/registro']">
+          <ion-icon name="home-outline"></ion-icon>
+          Inicio
+        </ion-item>
+        <ion-item [routerLink] = "['/registro']">
+          <ion-icon name="person-add-outline"></ion-icon>
+          Registro
+        </ion-item>
+        <ion-item [routerLink] ="['/inicio']">
+          <ion-icon name="log-in-outline"></ion-icon>
+          Login
+        </ion-item>
+        <ion-item [routerLink] = "['/contactos']">
+          <ion-icon name="time-outline"></ion-icon>
+          Historial
+        </ion-item>
+        <ion-item [routerLink] = "['/ayuda']">
+          <ion-icon name="information-outline"></ion-icon>
+          Ayuda
+        </ion-item>
+        <!--LOGOUT, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-router-outlet id="main"></ion-router-outlet>
+<ion-content class="conte">
+
+<h1 align="center" > Conductores </h1>
+
+
+<ion-list>
+  <ion-item *ngFor="let c of cond">
+    <ion-avatar slot="start">
+      <ion-img [src]="c.imgURL"></ion-img>
+    </ion-avatar>
+    <ion-label>
+    {{c.nombre}}
+    </ion-label>
+  </ion-item>
+</ion-list>
 
 </ion-content>
+
+
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Duoc uc</ion-title>
+  </ion-toolbar>
+</ion-footer>
