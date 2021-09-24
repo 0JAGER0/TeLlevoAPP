@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 #container {
   text-align: center;
 
@@ -32,3 +36,20 @@
   --backdrop:var(--backdrop)
 }
 
+ion-content {
+  #map {
+    width: 90%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+    display: block;
+    &.show-map{
+      opacity: 1;
+    }
+  }
+}
+
+.titulo_map {
+  font-family: 'Noto Sans', sans-serif;
+
+}
