@@ -1,75 +1,51 @@
-<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
-
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      TeLlevoApp
+<ion-header>
+    <ion-toolbar>
+      <ion-title color="light">
+        <h3 class="Cabezera_app">TeLlevoApp<ion-icon name="car-sport-sharp"></ion-icon></h3>
     </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-    <ion-buttons slot="start" >
-      <ion-menu-button color="dark"></ion-menu-button>
-    </ion-buttons>
-    
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
+<ion-card class="contenedor_login">
+        <ion-card-header>
+              <ion-card-title class="Cabezera_app">Iniciar sesion</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+            <ion-item>
+                    <ion-icon name="person" class="icon-login"></ion-icon>
+                    <ion-input name="user" type="text" required placeholder="Usuario"></ion-input>
+                </ion-item>
+                <br />
+                <ion-item>
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <ion-input name="password" type="password" required placeholder="Contraseña"></ion-input>
+                </ion-item>
+            </ion-list>
 
-<ion-content> 
-  
-  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
-    <ion-header>
-      <ion-toolbar color="dark">
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <!--CUENTA, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
-        <ion-item [routerLink] = "['/registro']">
-          <ion-icon name="person-add-outline"></ion-icon>
-          Registro
-        </ion-item>
-        <ion-item [routerLink] ="['/inicio']">
-          <ion-icon name="log-in-outline"></ion-icon>
-          Login
-        </ion-item>
-        <ion-item [routerLink] = "['/contactos']">
-          <ion-icon name="call-outline"></ion-icon>
-          Contactos
-        </ion-item>
-        <ion-item [routerLink] = "['/ayuda']">
-          <ion-icon name="information-outline"></ion-icon>
-          Ayuda
-        </ion-item>
-        <!--LOGOUT, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-  <ion-router-outlet id="main"></ion-router-outlet>
-
-  <ion-content>
-    <div id="header">
-      <h1>Iniciar sesion</h1>
-    </div>
-  
-    <form id="form">
-      <app-input placeholder="Email"></app-input>
-      <app-input type="password" placeholder="Password"></app-input>
-      <ion-button expand="block" shape="round">Ingresar</ion-button>
-    </form>
-
-  </ion-content>
-  
-
-
-
-
+            <ion-row>
+                <ion-col>
+                    <ion-button type="submit" fill="solid" expand="full" [routerLink] ="['/home']">
+                        Entrar
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-label>
+                        <a [routerLink] ="['/registro']"><h3 class="link_page">Crear una cuenta</h3></a>
+                    </ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-label>
+                        <a><h3 class="link_page">¿Olvido la contraseña?</h3></a>
+                    </ion-label>
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
-
-<ion-footer class="ion-no-border">
-  <ion-toolbar>
-    <ion-title>¿What are you looking for her?</ion-title>
-  </ion-toolbar>
-</ion-footer>
