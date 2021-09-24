@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { MenuController } from '@ionic/angular';
+
 
 
 @Component({
@@ -8,6 +9,10 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  imagenes=[
+    'assets/fotos_app/auto_negro.png'
+  ]
 
   constructor(private menu: MenuController) { }
 
