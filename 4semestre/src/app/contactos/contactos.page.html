@@ -4,7 +4,7 @@
 
 
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="warning">
     <ion-title>
  <h3  align="center">TeLlevoApp    <ion-icon name="car-sport-sharp"></ion-icon></h3>
     </ion-title>
@@ -17,7 +17,7 @@
 </ion-header>
 
 
-<ion-content>
+
   
   <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
     <ion-header>
@@ -41,7 +41,7 @@
           Login
         </ion-item>
         <ion-item [routerLink] = "['/contactos']">
-          <ion-icon name="call-outline"></ion-icon>
+          <ion-icon name="time-outline"></ion-icon>
           Historial
         </ion-item>
         <ion-item [routerLink] = "['/ayuda']">
@@ -55,15 +55,22 @@
   </ion-menu>
   
   <ion-router-outlet id="main"></ion-router-outlet>
+<ion-content class="conte">
 
-<h1 align="center" > Historial</h1>
+<h1 align="center" > Historial </h1>
 
 
-<section>
-  <ion-button expand="block">Pasajeros</ion-button>
+<section class="boton">
+<ion-avatar>
+  <img src="https://w7.pngwing.com/pngs/1002/468/png-transparent-airplane-computer-icons-passenger-transport-airplane-angle-logo-car-seat.png">
+</ion-avatar>
+  <ion-button expand="block" [routerLink] = "['/pasajeros']">Pasajeros</ion-button>
   </section>
-<section>
-    <ion-button expand="block">Conductores</ion-button>
+  <ion-avatar>
+  <img src="https://img2.freepng.es/20180421/uyq/kisspng-car-computer-icons-sedan-auto-detailing-auto-vector-5adb8f31845cb4.3836226215243384815422.jpg">
+</ion-avatar>
+<section class="boton">
+    <ion-button expand="block"  [routerLink] = "['/conductores']">Conductores</ion-button>
 </section>
 
 </ion-content>
