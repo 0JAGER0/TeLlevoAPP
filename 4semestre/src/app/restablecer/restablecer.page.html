@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title color="light">
+      <h3 class="titulo_app">TeLlevoApp<ion-icon name="car-sport-sharp"></ion-icon></h3>
+  </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="contenedor_login">
+    <ion-card-header>
+          <ion-card-title class="titulo_app">Restablecer Contraseña</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+                <ion-icon name="person" class="icon-login"></ion-icon>
+                <ion-input name="user" type="email" required placeholder="Correo Electronico"></ion-input>
+        </ion-item>
+      </ion-list>
+
+        <ion-row>
+            <ion-col>
+                <ion-button type="submit" fill="solid" expand="full" [routerLink] ="['/inicio']">
+                  RECUPERAR
+                </ion-button>
+            </ion-col>
+        </ion-row>
+
+      <p><ion-text color="danger">*</ion-text>Se le enviara una notificacion por correo electronico para restablecimiento de su contraseña.</p>
+    
+    </ion-card-content>
+</ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="warning">
+    <ion-title color="light">
+      <h3 class="pie_app">Duoc UC</h3>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

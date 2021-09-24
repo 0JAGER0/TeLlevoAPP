@@ -36,6 +36,10 @@ const routes: Routes = [
     path: 'conductores',
     loadChildren: () => import('./conductores/conductores.module').then( m => m.ConductoresPageModule)
   },
+  {
+    path: 'restablecer',
+    loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule)
+  },
 
 
 

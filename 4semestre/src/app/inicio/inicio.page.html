@@ -16,7 +16,7 @@
             <ion-list>
             <ion-item>
                     <ion-icon name="person" class="icon-login"></ion-icon>
-                    <ion-input name="user" type="text" required placeholder="Usuario"></ion-input>
+                    <ion-input name="user" type="email" required placeholder="Usuario"></ion-input>
                 </ion-item>
                 <br />
                 <ion-item>
@@ -28,7 +28,7 @@
             <ion-row>
                 <ion-col>
                     <ion-button type="submit" fill="solid" expand="full" [routerLink] ="['/home']">
-                        Entrar
+                        Ingresar
                     </ion-button>
                 </ion-col>
             </ion-row>
@@ -42,10 +42,18 @@
             <ion-row>
                 <ion-col>
                     <ion-label>
-                        <a><h3 class="link_page">¿Olvido la contraseña?</h3></a>
+                        <a [routerLink] ="['/restablecer']"><h3 class="link_page">¿Olvido la contraseña?</h3></a>
                     </ion-label>
                 </ion-col>
             </ion-row>
         </ion-card-content>
     </ion-card>
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar color="warning">
+      <ion-title color="light">
+        <h3 class="pie_app">Duoc UC</h3>
+      </ion-title>
+    </ion-toolbar>
+  </ion-footer>
