@@ -1,5 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { NgModule } from '@angular/core';
 
 declare var google;
 
@@ -23,22 +26,22 @@ export class HomePage implements OnInit{
   imagenes=[
     'assets/fotos_app/auto_negro.png'
   ]
-
-  constructor(private menu: MenuController) {}
+  // private geolocation: Geolocation, private loadingCtrl: LoadingController
+  
+  constructor(private menu: MenuController, ) {}
+  
 
   ngOnInit(){
     this.loadMap();
+
   }
 
   loadMap() {
-    // create a new map by passing HTMLElement
     const mapEle: HTMLElement = document.getElementById('map');
-    // create LatLng object
     const myLatLng = {lat: -33.522773, lng: -70.785609};
-    // create map
     this.map = new google.maps.Map(mapEle, {
       center: myLatLng,
-      zoom: 10
+      zoom: 13
     });
   
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
@@ -53,6 +56,8 @@ export class HomePage implements OnInit{
       this.addMarker(marker);
     });
   }
+
+  
 
   addMarker(marker: Marker) {
     return new google.maps.Marker({
