@@ -26,8 +26,9 @@ export class HomePage implements OnInit{
   imagenes=[
     'assets/fotos_app/auto_negro.png'
   ]
+  // private geolocation: Geolocation, private loadingCtrl: LoadingController
   
-  constructor(private menu: MenuController) {}
+  constructor(private menu: MenuController, ) {}
   
 
   ngOnInit(){
@@ -40,7 +41,7 @@ export class HomePage implements OnInit{
     const myLatLng = {lat: -33.522773, lng: -70.785609};
     this.map = new google.maps.Map(mapEle, {
       center: myLatLng,
-      zoom: 10
+      zoom: 13
     });
   
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
