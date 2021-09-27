@@ -20,18 +20,30 @@
   <ion-card-header>
   <ion-card-subtitle>¿No puede inciar sesion?</ion-card-subtitle>
 
-<div >
-  <h2><ion-card-subtitle>  1. Verifica que estas usando los datos de inicio de sesion correctos.</ion-card-subtitle></h2>
-  <ion-text>Comprueba que el correo electronico/numero de telefono y la contraseña coincidan con los detalles ingresados al crear tu cuenta.</ion-text>
+    <div >
+      <h2><ion-card-subtitle>  1. Verifica que estas usando los datos de inicio de sesion correctos.</ion-card-subtitle></h2>
+      <ion-text>Comprueba que el correo electronico/numero de telefono y la contraseña coincidan con los detalles ingresados al crear tu cuenta.</ion-text>
 
-  <h2><ion-card-subtitle>  2. Restablece tu contraseña.</ion-card-subtitle></h2>
-<ion-text>Si olvidaste la contraseña restablece tu contraseña en el siguiente enlace.</ion-text>
+      <h2><ion-card-subtitle>  2. Restablece tu contraseña.</ion-card-subtitle></h2>
+    <ion-text>Si olvidaste la contraseña restablece tu contraseña en el siguiente enlace.</ion-text>
+    
+          <ion-item [routerLink] = "['/restablecer']">
+            Restablece tu contraseña aqui
+          </ion-item>
 
-  <h2><ion-card-subtitle>  3. contactate con el soporte de DuocUC.</ion-card-subtitle></h2>
-  <ion-text>Si aun tienes problemas despues de intentar restablecer la contraseña, comunicate con nosotros.</ion-text>
+      <h2><ion-card-subtitle>  3. contactate con el soporte de DuocUC.</ion-card-subtitle></h2>
+      <ion-text>Si aun tienes problemas despues de intentar restablecer la contraseña, comunicate con nosotros.</ion-text>
 
-</div>
+    </div>
   </ion-card-header>
 </ion-card>
 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="warning">
+    <ion-title color="light">
+      <h3 class="pie_app">Duoc UC</h3>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
