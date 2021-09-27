@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
-import { Geolocation } from '@ionic-native/geolocation/ngx';
+
 import { NgModule } from '@angular/core';
 
 declare var google;
