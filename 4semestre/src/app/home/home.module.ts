@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
+import { LoadingController } from '@ionic/angular';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 import { HomePageRoutingModule } from './home-routing.module';
 

@@ -36,22 +36,13 @@
   --backdrop:var(--backdrop)
 }
 
-ion-content {
-  #map {
-    width: 90%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 500ms ease-in;
-    display: block;
-    &.show-map{
-      opacity: 1;
-    }
-  }
+ion-content ion-toolbar {
+  --background: translucent;
 }
 
-.titulo_map {
-  font-family: 'Noto Sans', sans-serif;
-
+#map{
+  width: 100%;
+  height: 100%;
 }
 
 
