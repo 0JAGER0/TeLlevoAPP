@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color= "warning">
     <ion-title>Ayuda</ion-title>
 
     <ion-buttons slot="start" >
@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content>
-  <h1>Ayud</h1>
+  <h2>Centro de ayuda</h2>
 
   <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
     <ion-header>
@@ -56,12 +56,17 @@
       <ion-card-subtitle>Centro de Ayuda DuocUC</ion-card-subtitle>
     <!--Texto de ayuda--> 
     <ion-text color="dark">
-      <h1 >Problemas con el viaje</h1>
-      <h2>No puedes solicitar servicios</h2>
-      <h3>Problemas con tu cuenta</h3>
-      <h4></h4>
-      <h5>Contactate con nosotros</h5>
-      <h4>+56289715274</h4>
+
+          <ion-item [routerLink] = "['/problemaviaje']">
+            Problemas con el viaje
+          </ion-item>
+          <ion-item [routerLink] = "['/solicitarservi']">
+            No puedes solicitar servicios
+          </ion-item>
+          <ion-item [routerLink] = "['/problemacuenta']">
+            Problemas con tu cuenta
+          </ion-item>
+
       
     </ion-text>
 
@@ -69,3 +74,11 @@
   </ion-card>
   
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="warning">
+    <ion-title color="light">
+      <h3 class="pie_app">Duoc UC</h3>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

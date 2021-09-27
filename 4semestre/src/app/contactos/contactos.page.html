@@ -5,8 +5,8 @@
 
 <ion-header>
   <ion-toolbar color="warning">
-    <ion-title>
- <h3  align="center">TeLlevoApp    <ion-icon name="car-sport-sharp"></ion-icon></h3>
+    <ion-title color="light">
+ <h3>TeLlevoApp<ion-icon name="car-sport-sharp"></ion-icon></h3>
     </ion-title>
 
     <ion-buttons slot="start" >
@@ -16,12 +16,9 @@
   </ion-toolbar>
 </ion-header>
 
-
-
-  
   <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
     <ion-header>
-      <ion-toolbar color="black">
+      <ion-toolbar color="dark">
         <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -55,31 +52,34 @@
   </ion-menu>
   
   <ion-router-outlet id="main"></ion-router-outlet>
+
 <ion-content class="conte">
 
-<h1 align="center" > Historial </h1>
-
-
-<section class="boton">
-<ion-avatar>
-  <img src="https://w7.pngwing.com/pngs/1002/468/png-transparent-airplane-computer-icons-passenger-transport-airplane-angle-logo-car-seat.png">
-</ion-avatar>
-  <ion-button expand="block" [routerLink] = "['/pasajeros']">Pasajeros</ion-button>
-  </section>
-  <ion-avatar>
-  <img src="https://img2.freepng.es/20180421/uyq/kisspng-car-computer-icons-sedan-auto-detailing-auto-vector-5adb8f31845cb4.3836226215243384815422.jpg">
-</ion-avatar>
-<section class="boton">
-    <ion-button expand="block"  [routerLink] = "['/conductores']">Conductores</ion-button>
-</section>
-
-</ion-content>
-
-
+  <ion-card class="contenedor_Hist">
+          <ion-card-header>
+                <ion-card-title class="titulo_app"><b>Historial</b></ion-card-title>
+          </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+              <ion-avatar>
+                    <img src="https://w7.pngwing.com/pngs/1002/468/png-transparent-airplane-computer-icons-passenger-transport-airplane-angle-logo-car-seat.png">           
+              </ion-avatar>
+            <ion-button expand="block" [routerLink] = "['/pasajeros']">Pasajeros</ion-button>
+                  <br />
+                <ion-avatar>
+                    <img src="https://img2.freepng.es/20180421/uyq/kisspng-car-computer-icons-sedan-auto-detailing-auto-vector-5adb8f31845cb4.3836226215243384815422.jpg">
+                </ion-avatar>
+                <ion-button expand="block"  [routerLink] = "['/conductores']">Conductores</ion-button>
+            </ion-list>
+          </ion-card-content>
+      </ion-card>
+  </ion-content>
 
 <ion-footer class="ion-no-border">
-  <ion-toolbar>
-    <ion-title>Duoc uc</ion-title>
+  <ion-toolbar color="warning">
+    <ion-title color="light">
+       <h3 class="pie_app">Duoc UC</h3>
+    </ion-title>
   </ion-toolbar>
 </ion-footer>
 
