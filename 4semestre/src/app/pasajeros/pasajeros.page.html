@@ -41,8 +41,8 @@
           Login
         </ion-item>
         <ion-item [routerLink] = "['/contactos']">
-          <ion-icon name="time-outline"></ion-icon>
-          Historial
+          <ion-icon  name="call-sharp"></ion-icon>
+          Contactos
         </ion-item>
         <ion-item [routerLink] = "['/ayuda']">
           <ion-icon name="information-outline"></ion-icon>
@@ -57,18 +57,28 @@
   <ion-router-outlet id="main"></ion-router-outlet>
 <ion-content class="conte">
 
-<h1 align="center" > Pasajeros </h1>
 
-<ion-list>
-  <ion-item *ngFor="let p of psj">
-    <ion-avatar slot="start">
-      <ion-img [src]="p.imgURL"></ion-img>
-    </ion-avatar>
-    <ion-label>
-    {{p.nombre}}
-    </ion-label>
-  </ion-item>
-</ion-list>
+
+<ion-card class="contenedor_psj">
+          <ion-card-header>
+                <ion-card-title class="titulo_app"><b>Pasajeros</b></ion-card-title>
+          </ion-card-header>
+        <ion-card-content>
+            <ion-list>
+                <ion-item *ngFor="let p of psj">
+                  <ion-avatar slot="start">
+                    <ion-img [src]="p.imgURL"></ion-img>
+                  </ion-avatar>
+                <ion-label>
+                  {{p.nombre}}
+                   <ion-item *ngFor="let s of p.sede"> 
+                  {{s}}
+                  </ion-item>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+      </ion-card>
 
 
 
@@ -76,8 +86,9 @@
 
 
 
+
 <ion-footer class="ion-no-border">
-  <ion-toolbar>
+  <ion-toolbar color="warning">
     <ion-title>Duoc uc</ion-title>
   </ion-toolbar>
 </ion-footer>
