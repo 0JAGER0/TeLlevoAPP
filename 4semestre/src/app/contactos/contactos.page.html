@@ -6,9 +6,8 @@
 <ion-header>
   <ion-toolbar color="warning">
     <ion-title color="light">
- <h3>TeLlevoApp<ion-icon name="car-sport-sharp"></ion-icon></h3>
+        <h3>TeLlevoApp<ion-icon name="car-sport-sharp"></ion-icon></h3>
     </ion-title>
-
     <ion-buttons slot="start" >
       <ion-menu-button color="dark"></ion-menu-button>
     </ion-buttons>
@@ -25,7 +24,7 @@
     <ion-content>
       <ion-list>
         <!--CUENTA, AQUI DEBE APARECER CUANDO LA CUENTA SE INICIE-->
-        <ion-item [routerLink] = "['/registro']">
+        <ion-item [routerLink] = "['/home']">
           <ion-icon name="home-outline"></ion-icon>
           Inicio
         </ion-item>
@@ -62,19 +61,22 @@
         <ion-card-content>
             <ion-list>
               <ion-avatar>
-                    <img src="https://w7.pngwing.com/pngs/1002/468/png-transparent-airplane-computer-icons-passenger-transport-airplane-angle-logo-car-seat.png">           
-              </ion-avatar>
+                <div class="square">
+                    <img src="data:image/png;base64,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">   
+                </div>
+             </ion-avatar>
             <ion-button expand="block" [routerLink] = "['/pasajeros']">Pasajeros</ion-button>
                   <br />
                 <ion-avatar>
-                    <img src="https://img2.freepng.es/20180421/uyq/kisspng-car-computer-icons-sedan-auto-detailing-auto-vector-5adb8f31845cb4.3836226215243384815422.jpg">
+                  <div class="squareb">
+                    <img src="https://t3.ftcdn.net/jpg/01/71/13/24/360_F_171132449_uK0OO5XHrjjaqx5JUbJOIoCC3GZP84Mt.jpg">
+                  </div>
                 </ion-avatar>
                 <ion-button expand="block"  [routerLink] = "['/conductores']">Conductores</ion-button>
             </ion-list>
           </ion-card-content>
       </ion-card>
   </ion-content>
-
 <ion-footer class="ion-no-border">
   <ion-toolbar color="warning">
     <ion-title color="light">
