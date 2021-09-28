@@ -19,7 +19,7 @@ export class ContactosPage {
   .duration(1600)
   .iterations(0.86)
   .fromTo('transform', 'translateX(0px)', 'translateX(107px)')
-  .fromTo('opacity', '0.1', '2');
+  .fromTo('opacity', '0.1', '3');
 
   const squareb = this.animationCtrl
   .create()
@@ -27,7 +27,7 @@ export class ContactosPage {
   .duration(1600)
   .iterations(0.86)
   .fromTo('transform', 'translateX(0px)', 'translateX(107px)')
-  .fromTo('opacity', '0.1', '2');
+  .fromTo('opacity', '0.1', '3');
     
     square.play(
     )
