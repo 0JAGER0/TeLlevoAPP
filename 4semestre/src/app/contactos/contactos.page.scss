@@ -23,8 +23,6 @@ border-radius: 20px;
 };
 
 ion-avatar{
-    margin-top: 25px;
-    margin-left: 106px;
     border-radius: 20px;
 };
 
@@ -44,4 +42,22 @@ ion-avatar{
 
 .pie_app{
   text-align: center;
+}
+
+.square{  
+  width: 100px;
+  height: 150px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+.squareb{  
+  width: 100px;
+  height: 120px;
+  margin-top: 35px;
+  border-radius: 10px;
+}
+
+ion-button{
+  margin-top: 35px;
 }
