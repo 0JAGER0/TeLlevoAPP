@@ -18,7 +18,7 @@ export class ContactosPage {
   .addElement(document.querySelector('.square'))
   .duration(1600)
   .iterations(0.86)
-  .fromTo('transform', 'translateX(0px)', 'translateX(97px)')
+  .fromTo('transform', 'translateX(0px)', 'translateX(107px)')
   .fromTo('opacity', '0.1', '2');
 
   const squareb = this.animationCtrl
@@ -26,7 +26,7 @@ export class ContactosPage {
   .addElement(document.querySelector('.squareb'))
   .duration(1600)
   .iterations(0.86)
-  .fromTo('transform', 'translateX(0px)', 'translateX(97px)')
+  .fromTo('transform', 'translateX(0px)', 'translateX(107px)')
   .fromTo('opacity', '0.1', '2');
     
     square.play(
