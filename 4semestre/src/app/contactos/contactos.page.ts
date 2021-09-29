@@ -18,7 +18,7 @@ export class ContactosPage {
   .addElement(document.querySelector('.Firstsquare'))
   .duration(1600)
   .iterations(0.86)
-  .fromTo('transform', 'translateX(0px)', 'translateX(107px)')
+  .fromTo('transform', 'translateX(0px)', 'translateX(110px)')
   .fromTo('opacity', '0.1', '3');
 
 
@@ -27,7 +27,7 @@ export class ContactosPage {
   .addElement(document.querySelector('.square2do'))
   .duration(1600)
   .iterations(0.86)
-  .fromTo('transform', 'translateX(0px)', 'translateX(107px)')
+  .fromTo('transform', 'translateX(0px)', 'translateX(110px)')
   .fromTo('opacity', '0.1', '3');
     
   Firstsquare.play(
