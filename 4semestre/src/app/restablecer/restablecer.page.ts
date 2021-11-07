@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ToastController } from '@ionic/angular';
+import { CrudService } from '../crud.service';
 
 @Component({
   selector: 'app-restablecer',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestablecerPage implements OnInit {
 
-  constructor() { }
+  rut = "";
+  usuario = "";
+  nombre ="";
+  telefono ="";
+  correo ="";
+  contrasenia ="";
+
+  constructor(private crud:CrudService, private toast: ToastController) { }
 
   ngOnInit() {
   }

@@ -98,9 +98,16 @@ export class RegistroPage implements OnInit {
 
     else
     {
-      const datos= [{"rut": txtRut.value,"usuario": txtUsuario.value,"nombre": txtNombre.value,"telefono": txtTelefono.value,"correo": txtCorreo.value,"contraseña": txtConstrasenia.value}];
+      const datos=[{
+       "rut": txtRut.value,
+       "usuario": txtUsuario.value,
+       "nombre": txtNombre.value,
+       "telefono": txtTelefono.value,
+       "correo": txtCorreo.value,
+       "contraseña": txtConstrasenia.value
+      }];
 
-      await this.crud.agregar(datos);
+      await this.crud.agregarConKey(txtUsuario.value,datos);
 
       const toast = await this.toast.create({
         message: 'Registro exitoso',
@@ -110,8 +117,8 @@ export class RegistroPage implements OnInit {
       });
       toast.present();
       txtRut.value = "";
-      txtUsuario.value = "";
       txtNombre.value = "";
+      txtUsuario.value = "";
       txtTelefono.value = "";
       txtCorreo.value = "";
       txtConstrasenia.value = "";

@@ -16,7 +16,7 @@ export class CrudService {
     await this.storage.create();
   }
 
-  async agregarConKey(key: string, valor: string)
+  async agregarConKey(key: string, valor: any)
   {
     await this.storage.set(key,valor);
   }
@@ -42,6 +42,13 @@ export class CrudService {
     {
       this.storage.remove(key);
     }
+
+
+    async update(key: string, valor: any)
+    {
+      await this.storage.set(key,valor);
+    }
+
 
 }
  

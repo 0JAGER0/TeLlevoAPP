@@ -13,22 +13,27 @@
           <ion-card-title class="titulo_app">Restablecer Contraseña</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-list>
-        <ion-item>
-                <ion-icon name="person" class="icon-login"></ion-icon>
-                <ion-input name="user" type="text" required placeholder="Nombre de usuario"></ion-input>
-        </ion-item>
-      </ion-list>
+      <ion-item>
+        <ion-label position="floating"> 
+          <ion-icon name="people-outline"></ion-icon>   Nombre Usuario</ion-label>
+        <ion-input type="text" placeholder="aaaaaaa" #txtUsuario></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon name="eye-off-sharp"></ion-icon>    Contraseña</ion-label>
+        <ion-input type="password" placeholder="ejemplo@ejemplo.com" #txtConstrasenia></ion-input>
+      </ion-item>
 
         <ion-row>
             <ion-col>
-                <ion-button type="submit" fill="solid" expand="full" [routerLink] ="['/inicio']">
+                <ion-button type="submit" fill="solid" expand="full" [routerLink] ="['/inicio']" (click)="actualizar(txtUsuario, txtConstrasenia)">
                   RECUPERAR
                 </ion-button>
             </ion-col>
         </ion-row>
 
-      <p><ion-text color="danger">*</ion-text>Se le enviara una notificacion por correo electronico para el restablecimiento de su contraseña.</p>
+      <p><ion-text color="danger">*</ion-text>Para cambiar la contraseña se debe ingresar el usuario y luego la contraseña nueva</p>
     
     </ion-card-content>
 </ion-card>
