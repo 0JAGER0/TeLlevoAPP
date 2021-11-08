@@ -21,9 +21,27 @@ const routes: Routes = [
     path: 'contactos',
     loadChildren: () => import('./contactos/contactos.module').then( m => m.ContactosPageModule)
   },
+
   {
     path: 'ayuda',
-    loadChildren: () => import('./ayuda/ayuda.module').then( m => m.AyudaPageModule)
+    children:[
+      {
+        path: '',
+        loadChildren: () => import('./ayuda/ayuda.module').then( m => m.AyudaPageModule)
+      },
+      {
+        path: 'problemascuenta',
+        loadChildren: () => import('./ayuda/problemascuenta/problemascuenta.module').then(m => m.ProblemascuentaPageModule)
+      },
+      {
+        path: 'proviaje',
+        loadChildren: () => import('./ayuda/proviaje/proviaje.module').then( m => m.ProviajePageModule)
+      },
+      {
+        path: 'solicitarservi',
+        loadChildren: () => import('./ayuda/solicitarservi/solicitarservi.module').then( m => m.SolicitarserviPageModule)
+      }
+    ]
   },
   {
     path: 'inicio',
@@ -41,22 +59,6 @@ const routes: Routes = [
     path: 'restablecer',
     loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule)
   },
-  {
-    path: 'proviaje',
-    loadChildren: () => import('./proviaje/proviaje.module').then( m => m.ProviajePageModule)
-  },
-  {
-    path: 'solicitarservi',
-    loadChildren: () => import('./solicitarservi/solicitarservi.module').then( m => m.SolicitarserviPageModule)
-  },
-  {
-    path: 'problemascuenta',
-    loadChildren: () => import('./problemascuenta/problemascuenta.module').then( m => m.ProblemascuentaPageModule)
-  },
-
-
-
-
 ];
 
 @NgModule({
