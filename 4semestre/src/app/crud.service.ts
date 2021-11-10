@@ -27,10 +27,10 @@ export class CrudService {
     await this.storage.set(id.toString(),valor);
   }
 
-    async reascatar(key:string)
-    {
-      return await this.storage.get(key);
-    }
+  async rescatar(key:string){
+    return await this.storage.get(key);
+
+  }
     listar()
     {
       let listado = []

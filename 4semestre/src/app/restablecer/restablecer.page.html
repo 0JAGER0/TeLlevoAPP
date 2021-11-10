@@ -13,12 +13,39 @@
           <ion-card-title class="titulo_app">Restablecer Contraseña</ion-card-title>
     </ion-card-header>
     <ion-card-content>
+      <p><ion-text color="danger">*</ion-text>Para cambiar la contraseña se debe ingresar el usuario para reconocer los demas datos</p>
+      
+
       <ion-item>
         <ion-label position="floating"> 
           <ion-icon name="people-outline"></ion-icon>   Nombre Usuario</ion-label>
         <ion-input type="text" placeholder="aaaaaaa" #txtUsuario></ion-input>
       </ion-item>
 
+      <ion-item>
+        <ion-label position="floating"> 
+          <ion-icon name="person-circle-outline"></ion-icon>   Rut</ion-label>
+        <ion-input type="text" placeholder="11.111.111-1" #txtRut></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating"> 
+          <ion-icon name="person-sharp"></ion-icon>    Nombre Completo</ion-label>
+        <ion-input type="text"  placeholder="aaaa aaaa aaaa aaaa" #txtNombre></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon name="call-sharp"></ion-icon>    Número de teléfono</ion-label>
+        <ion-input type="number" placeholder="111111111" #txtTelefono></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon name="mail-sharp"></ion-icon>    Correo Electrónico</ion-label>
+        <ion-input type="email" placeholder="ejemplo@ejemplo.com" #txtCorreo></ion-input>
+      </ion-item>
+    
       <ion-item>
         <ion-label position="floating">
           <ion-icon name="eye-off-sharp"></ion-icon>    Contraseña</ion-label>
@@ -27,13 +54,13 @@
 
         <ion-row>
             <ion-col>
-                <ion-button type="submit" fill="solid" expand="full" [routerLink] ="['/inicio']" (click)="actualizar(txtUsuario, txtConstrasenia)">
-                  RECUPERAR
+                <ion-button type="submit" fill="solid" expand="full"  (click)="actualizar(txtRut,txtUsuario,txtTelefono,txtCorreo,txtTelefono,txtConstrasenia)">
+                  Restablecer
                 </ion-button>
             </ion-col>
         </ion-row>
 
-      <p><ion-text color="danger">*</ion-text>Para cambiar la contraseña se debe ingresar el usuario y luego la contraseña nueva</p>
+      
     
     </ion-card-content>
 </ion-card>

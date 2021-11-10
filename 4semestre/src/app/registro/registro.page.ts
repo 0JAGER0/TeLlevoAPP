@@ -130,6 +130,12 @@ export class RegistroPage implements OnInit {
 
   }
 
+
+  
+
+
+
+
   ngOnInit() {
   }
 
