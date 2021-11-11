@@ -3,7 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: 'home/:Usuario',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
@@ -58,7 +58,11 @@ const routes: Routes = [
   {
     path: 'restablecer',
     loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule)
+  },  {
+    path: 'usuarios',
+    loadChildren: () => import('./usuarios/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
   },
+
 ];
 
 @NgModule({
