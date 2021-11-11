@@ -3,6 +3,8 @@ import { MenuController } from '@ionic/angular';
 import { CrudService } from '../crud.service';
 import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { UsuarioService } from '../servicios/usuario.service';
+
 
 @Component({
   selector: 'app-inicio',
@@ -11,6 +13,8 @@ import { Router } from '@angular/router';
 })
 export class InicioPage implements OnInit{
 
+  users =[]
+
   rut = "";
   usuario = "";
   nombre ="";
@@ -18,7 +22,7 @@ export class InicioPage implements OnInit{
   correo ="";
   contrasenia ="";
 
-  constructor(private menu: MenuController,private crud:CrudService, private toast: ToastController, private router: Router) { }
+  constructor(private menu: MenuController,private crud:CrudService, private toast: ToastController, private router: Router, private us:UsuarioService) { }
 
 
   async con(txtUsuario:HTMLInputElement,txtConstrasenia: HTMLInputElement)
@@ -76,5 +80,9 @@ export class InicioPage implements OnInit{
   }
 
   ngOnInit() {
+    this.us.cargarDatos().subscribe(data=>{
+      this.users = data
+
+    })
   }
 }
