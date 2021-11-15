@@ -45,7 +45,7 @@ export class InicioPage implements OnInit{
       else
       {
         const toast = await this.toast.create({
-          message: 'Password incorrecto , le quedan x intentos',
+          message: 'Error revise bien los datos',
           duration: 2000,
           color: "danger",
           position: "middle"

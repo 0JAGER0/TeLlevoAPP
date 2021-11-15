@@ -33,25 +33,30 @@ export class RestablecerPage implements OnInit {
     if (txtRut.value.trim().length != 0)
     {
       this.rut  = txtRut.value;
+
     }
 
     if (txtNombre.value.trim().length != 0)
     {
       this.nombre  = txtNombre.value;
+
     }
     if (txtTelefono.value.trim().length != 0)
     {
       this.telefono  = txtTelefono.value;
+
     }
    
     if (txtCorreo.value.trim().length != 0)
     {
       this.correo  = txtCorreo.value;
+
     }
    
     if (txtConstrasenia.value.trim().length != 0)
     {
       this.contrasenia  = txtConstrasenia.value;
+ 
     }
    
    
