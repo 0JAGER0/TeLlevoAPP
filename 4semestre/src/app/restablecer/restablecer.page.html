@@ -16,13 +16,52 @@
 
       <ion-item>
         <ion-label position="floating"> 
+<<<<<<< HEAD
           <ion-icon name="people-outline"></ion-icon> Ingresar nueva Contraseña </ion-label>
         <ion-input type="password" placeholder="asd123#!*" #txtConstrasenia></ion-input>
+=======
+          <ion-icon name="people-outline"></ion-icon>   Nombre Usuario</ion-label>
+        <ion-input type="text" placeholder="aaaaaaa" #txtUsuario></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating"> 
+          <ion-icon name="person-circle-outline"></ion-icon>   Rut</ion-label>
+        <ion-input type="text" placeholder="11.111.111-1" #txtRut></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating"> 
+          <ion-icon name="person-sharp"></ion-icon>    Nombre Completo</ion-label>
+        <ion-input type="text"  placeholder="aaaa aaaa aaaa aaaa" #txtNombre></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon name="call-sharp"></ion-icon>    Número de teléfono</ion-label>
+        <ion-input type="number" placeholder="111111111" #txtTelefono></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon name="mail-sharp"></ion-icon>    Correo Electrónico</ion-label>
+        <ion-input type="email" placeholder="ejemplo@ejemplo.com" #txtCorreo></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">
+          <ion-icon name="eye-off-sharp"></ion-icon>    Contraseña</ion-label>
+        <ion-input type="password" placeholder="*******" #txtConstrasenia></ion-input>
+>>>>>>> 13783f98001ac50ee95294448a04b47113326e59
       </ion-item>
 
         <ion-row>
             <ion-col>
+<<<<<<< HEAD
                 <ion-button type="submit" fill="solid" expand="full" (click)="actualizar(txtConstrasenia)">
+=======
+                <ion-button type="submit" fill="solid" expand="full"  (click)="actualizar(txtRut,txtUsuario,txtNombre,txtTelefono,txtCorreo,txtConstrasenia)">
+>>>>>>> 13783f98001ac50ee95294448a04b47113326e59
                   Restablecer
                 </ion-button>
             </ion-col>

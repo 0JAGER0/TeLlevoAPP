@@ -37,7 +37,7 @@ export class InicioPage implements OnInit{
         const toast = await this.toast.create({
           message: 'Bienvenido',
           duration: 2000,
-          color: "success",
+          color: "success", 
           position: "middle"
         })
         toast.present();
@@ -45,7 +45,7 @@ export class InicioPage implements OnInit{
       else
       {
         const toast = await this.toast.create({
-          message: 'Password incorrecto , le quedan x intentos',
+          message: 'Error revise bien los datos',
           duration: 2000,
           color: "danger",
           position: "middle"
@@ -80,9 +80,6 @@ export class InicioPage implements OnInit{
   }
 
   ngOnInit() {
-    this.us.cargarDatos().subscribe(data=>{
-      this.users = data
 
-    })
   }
 }
