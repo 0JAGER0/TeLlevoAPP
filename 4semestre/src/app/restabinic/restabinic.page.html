@@ -10,25 +10,27 @@
 
   <ion-card class="contenedor_login">
     <ion-card-header>
-          <ion-card-title class="titulo_app">Restablecer Contraseña</ion-card-title>
+          <ion-card-title class="titulo_app"><b>Restablecer Contraseña</b></ion-card-title>
     </ion-card-header>
     <ion-card-content>
-
+      
       <ion-item>
         <ion-label position="floating"> 
-          <ion-icon name="people-outline"></ion-icon> Ingresar nueva Contraseña </ion-label>
-        <ion-input type="password" placeholder="asd123#!*" #txtConstrasenia></ion-input>
+          <ion-icon name="people-outline"></ion-icon>
+          Ingresar nombre de Usuario
+        </ion-label>
+        <ion-input type="Email" placeholder="correo electronico" #txtUsuario></ion-input>
       </ion-item>
 
         <ion-row>
             <ion-col>
-                <ion-button type="submit" fill="solid" expand="full" (click)="actualizar(txtConstrasenia)">
-                  Restablecer
+                <ion-button type="submit" fill="solid" expand="full" (click)="con(txtUsuario)">
+                  Conectar
                 </ion-button>
             </ion-col>
         </ion-row>
 
-        <p><ion-text color="danger">*</ion-text>Ingresa la contraseña antigua y la nueva para restablecerla correctamente</p>
+      <p><ion-text color="danger">*</ion-text>Para restablecer su Contraseña, debera ingresar su Nombre de Usuario</p>
     
     </ion-card-content>
 </ion-card>
@@ -42,3 +44,4 @@
     </ion-title>
   </ion-toolbar>
 </ion-footer>
+

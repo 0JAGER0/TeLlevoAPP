@@ -57,14 +57,27 @@ const routes: Routes = [
   },
   {
     path: 'restablecer',
-    loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule)
-  },  {
+    children:[{
+      path: '',
+      loadChildren: () => import('./restabinic/restabinic.module').then(m => m.RestabinicPageModule)
+    },
+    {
+      path: ':id',
+      loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule)
+    }
+    ]
+  },
+  {
     path: 'usuarios',
     loadChildren: () => import('./usuarios/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
   },
   {
     path: 'listausuarios',
     loadChildren: () => import('./listausuarios/listausuarios.module').then( m => m.ListausuariosPageModule)
+  },
+  {
+    path:'restabinic',
+    loadChildren: () => import('./restabinic/restabinic.module').then(m => m.RestabinicPageModule)
   },
 
 ];

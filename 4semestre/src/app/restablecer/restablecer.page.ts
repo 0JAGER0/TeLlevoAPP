@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { CrudService } from '../crud.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-restablecer',
@@ -14,66 +17,48 @@ export class RestablecerPage implements OnInit {
   nombre ="";
   telefono ="";
   correo ="";
-  contrasenia ="";
+  constrasenia ="";
+  mikey='';
 
-  constructor(private crud:CrudService, private toast: ToastController) { }
-
-
+  constructor(private crud:CrudService, private toast: ToastController, private ruta: ActivatedRoute, private router: Router) { }
   
-  async actualizar(txtRut:HTMLInputElement, txtUsuario:HTMLInputElement, txtNombre:HTMLInputElement, txtTelefono:HTMLInputElement, txtCorreo:HTMLInputElement, txtConstrasenia:HTMLInputElement)
+  async actualizar(txtConstrasenia:HTMLInputElement)
   {
-    const valor = await this.crud.rescatar(txtUsuario.value);
+    const valor = await this.crud.rescatar(this.mikey);
     this.rut = valor[0].rut;
+    this.usuario = valor[0].usuario;
     this.nombre = valor[0].nombre;
     this.telefono = valor[0].telefono;
     this.correo = valor[0].correo;
-    this.contrasenia = valor[0].contrasenia;
+    this.constrasenia = valor[0].constrasenia;
 
-
-    if (txtRut.value.trim().length != 0)
-    {
-      this.rut  = txtRut.value;
-    }
-
-    if (txtNombre.value.trim().length != 0)
-    {
-      this.nombre  = txtNombre.value;
-    }
-    if (txtTelefono.value.trim().length != 0)
-    {
-      this.telefono  = txtTelefono.value;
-    }
-   
-    if (txtCorreo.value.trim().length != 0)
-    {
-      this.correo  = txtCorreo.value;
-    }
-   
     if (txtConstrasenia.value.trim().length != 0)
     {
-      this.contrasenia  = txtConstrasenia.value;
+      this.constrasenia = txtConstrasenia.value;
+      this.router.navigateByUrl('/inicio')
+      const toast = await this.toast.create({
+        message: 'Contrasenia cambiada exitosamente, se enviara notificacion por correo',
+        duration: 2000,
+        color: "success",
+        position: "top"
+      })
+      toast.present();
     }
-   
    
     const datos = [{
       "rut":this.rut,
+      "usuario":this.usuario,
       "nombre":this.nombre,
       "telefono":this.telefono,
       "correo":this.correo,
-      "contrasenia":this.contrasenia
+      "constrasenia":this.constrasenia
     }];
-
-    await this.crud.agregarConKey(txtUsuario.value,datos);
-    txtRut.value = "";
-    txtNombre.value = "";
-    txtTelefono.value = "";
-    txtCorreo.value = "";
-    txtUsuario.value = "";
-    txtConstrasenia.value = "";
-
-  }
+    await this.crud.agregarConKey(this.mikey,datos);
   
+  }
+ 
   ngOnInit() {
+    this.ruta.paramMap.subscribe(paraMap => { this.mikey = paraMap.get('id'); }); 
   }
 
 
