@@ -57,7 +57,6 @@ const routes: Routes = [
   },
   {
     path: 'restablecer',
-<<<<<<< HEAD
     children:[{
       path: '',
       loadChildren: () => import('./restabinic/restabinic.module').then(m => m.RestabinicPageModule)
@@ -67,13 +66,6 @@ const routes: Routes = [
       loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule)
     }
     ]
-  },
-  {
-    path: 'usuarios',
-    loadChildren: () => import('./usuarios/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
-=======
-    loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule)
->>>>>>> 13783f98001ac50ee95294448a04b47113326e59
   },
   {
     path: 'listausuarios',
@@ -86,11 +78,7 @@ const routes: Routes = [
 
 ];
 
-<<<<<<< HEAD
-=======
-];
 
->>>>>>> 13783f98001ac50ee95294448a04b47113326e59
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
