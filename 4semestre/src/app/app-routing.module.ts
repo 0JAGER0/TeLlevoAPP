@@ -58,9 +58,6 @@ const routes: Routes = [
   {
     path: 'restablecer',
     loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule)
-  },  {
-    path: 'usuarios',
-    loadChildren: () => import('./usuarios/usuarios/usuarios.module').then( m => m.UsuariosPageModule)
   },
   {
     path: 'listausuarios',

@@ -9,6 +9,8 @@ import { UsuarioService } from '../servicios/usuario.service';
 export class ListausuariosPage implements OnInit {
   users =[]
 
+
+
   constructor(private us:UsuarioService) { }
 
   ngOnInit() {
