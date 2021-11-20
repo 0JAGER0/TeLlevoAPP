@@ -25,6 +25,7 @@ export class RestablecerPage implements OnInit {
   async actualizar(txtConstrasenia:HTMLInputElement)
   {
     const valor = await this.crud.rescatar(this.mikey);
+    /*Servira para guardar los datos de distintas variables dentro del storage, (sin eliminarlas)*/
     this.rut = valor[0].rut;
     this.usuario = valor[0].usuario;
     this.nombre = valor[0].nombre;
@@ -34,6 +35,7 @@ export class RestablecerPage implements OnInit {
 
     if (txtConstrasenia.value.trim().length != 0)
     {
+      /*Si el valor de TxtContrasenia, si el campo no esta vacio, va a guardar el valor de contraseña de TxtContrasenia*/
       this.constrasenia = txtConstrasenia.value;
       this.router.navigateByUrl('/inicio')
       const toast = await this.toast.create({
@@ -43,8 +45,17 @@ export class RestablecerPage implements OnInit {
         position: "top"
       })
       toast.present();
+    }else{
+      const toast = await this.toast.create({
+        message: 'Complete el campo',
+        duration: 2000,
+        color: "danger",
+        position: "top"
+      })
+      toast.present();
     }
    
+    /*Servira para guardar las variables dentro del storage, sin eliminarlas al modificar cualquier tipo de dato*/ 
     const datos = [{
       "rut":this.rut,
       "usuario":this.usuario,
@@ -53,15 +64,14 @@ export class RestablecerPage implements OnInit {
       "correo":this.correo,
       "constrasenia":this.constrasenia
     }];
+    /*Servira para que el cambio de contrasenia funcione correctamente dentro de la promesa */
     await this.crud.agregarConKey(this.mikey,datos);
   
   }
- 
+ /*Servira para tener guardado como string lo que se mando por parámetro en la ruta*/
   ngOnInit() {
     this.ruta.paramMap.subscribe(paraMap => { this.mikey = paraMap.get('id'); }); 
   }
-
-
 
 
 }
