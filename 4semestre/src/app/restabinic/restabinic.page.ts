@@ -18,7 +18,7 @@ export class RestabinicPage implements OnInit {
   ngOnInit() {
   }
 
- 
+
   async con(txtUsuario: HTMLInputElement)
   {
     const valor = await this.crud.rescatar(txtUsuario.value);
@@ -37,7 +37,6 @@ export class RestabinicPage implements OnInit {
       })
       toast.present();
     }
-      console.log("Usuario inexistente")
     }
   }
 
