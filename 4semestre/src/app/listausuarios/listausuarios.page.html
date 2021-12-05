@@ -1,22 +1,17 @@
 <ion-header>
   <ion-toolbar color="warning">
-
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-  
     <ion-title color="light">
         <h3 class="titulo_app">TeLlevoApp<ion-icon name="car-sport-sharp"></ion-icon></h3>
-    </ion-title>
-    
+    </ion-title>    
   </ion-toolbar>
 </ion-header>
-
 
 <ion-content class="cuerpo3">
 
   <h3 class="titulolistas">Lista de usuarios</h3>
-
   <ion-list  class="cuerpo2">
     <ion-item *ngFor ="let item of users" class="cuerpo"> 
         <br>

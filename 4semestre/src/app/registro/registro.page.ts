@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { CrudService } from '../crud.service';
 
-
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.page.html',
@@ -28,12 +27,11 @@ export class RegistroPage implements OnInit {
     {
       const toast = await this.toast.create({
         message: 'El rut no fue especificado',
-        duration: 2000,
+        duration: 10000,
         color: "danger",
         position: "middle"
       })
-      toast.present();
-      
+      toast.present();    
     }
 
     else if(txtUsuario.value.trim().length == 0)
@@ -44,8 +42,7 @@ export class RegistroPage implements OnInit {
         color: "danger",
         position: "middle"
       })
-      toast.present();
-      
+      toast.present();  
     }
 
     else if(txtNombre.value.trim().length == 0)
@@ -56,8 +53,7 @@ export class RegistroPage implements OnInit {
         color: "danger",
         position: "middle"
       })
-      toast.present();
-      
+      toast.present();     
     }
 
     else if(txtTelefono.value.trim().length == 0)
@@ -68,8 +64,7 @@ export class RegistroPage implements OnInit {
         color: "danger",
         position: "middle"
       })
-      toast.present();
-      
+      toast.present();     
     }
 
     else if(txtCorreo.value.trim().length == 0)
@@ -80,8 +75,7 @@ export class RegistroPage implements OnInit {
         color: "danger",
         position: "middle"
       })
-      toast.present();
-      
+      toast.present();     
     }
 
     else if(txtConstrasenia.value.trim().length == 0)
@@ -92,8 +86,7 @@ export class RegistroPage implements OnInit {
         color: "danger",
         position: "middle"
       })
-      toast.present();
-      
+      toast.present();     
     }
 
     else
@@ -111,7 +104,7 @@ export class RegistroPage implements OnInit {
 
       const toast = await this.toast.create({
         message: 'Registro exitoso',
-        duration: 2000,
+        duration: 8000,
         color: "success",
         position: "middle"
       });
@@ -122,16 +115,9 @@ export class RegistroPage implements OnInit {
       txtTelefono.value = "";
       txtCorreo.value = "";
       txtConstrasenia.value = "";
-
     }
-  
-
     this.nombre = "";
-
   }
-
-
-
 
   ngOnInit() {
   }

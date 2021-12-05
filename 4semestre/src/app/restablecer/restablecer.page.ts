@@ -4,7 +4,6 @@ import { ToastController } from '@ionic/angular';
 import { CrudService } from '../crud.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-restablecer',
   templateUrl: './restablecer.page.html',
@@ -54,7 +53,6 @@ export class RestablecerPage implements OnInit {
       "constrasenia":this.constrasenia
     }];
     await this.crud.agregarConKey(this.mikey,datos);
-  
   }
  
   ngOnInit() {

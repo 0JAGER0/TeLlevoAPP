@@ -20,7 +20,7 @@ export class InicioPage implements OnInit{
   nombre ="";
   telefono ="";
   correo ="";
-  constrasenia ="";
+  contrasenia ="";
 
   constructor(private menu: MenuController,private crud:CrudService, private toast: ToastController, private router: Router, private us:UsuarioService) { }
 
@@ -31,7 +31,7 @@ export class InicioPage implements OnInit{
     console.log(valor)
     if (valor != null)
     {
-      if (valor[0].constrasenia === txtConstrasenia.value)
+      if (valor[0].contraseña === txtConstrasenia.value)
       {
         this.router.navigateByUrl("/home/"+txtUsuario.value)
         const toast = await this.toast.create({
